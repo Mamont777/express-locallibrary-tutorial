@@ -28,7 +28,7 @@ app.use(limiter);
 mongoose.set("strictQuery", false);
 
 const dev_db_url = "mongodb://localhost:27017";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+const mongoDB = process.env.MONGODB_URL || dev_db_url;
 
 main().catch((err) => console.log(err));
 async function main() {
